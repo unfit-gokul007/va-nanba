@@ -14,7 +14,7 @@ export default function EditNote() {
   useEffect(() => {
     const fetchNote = async () => {
       const res = await axios.get(
-        `http://localhost:5000/api/notes/${id}`,
+        ` https://va-nanba.onrender.com/api/notes/${id}`,
         { headers: { Authorization: token } }
       );
 
@@ -27,7 +27,7 @@ export default function EditNote() {
 
   const updateNote = async () => {
     await axios.put(
-      `http://localhost:5000/api/notes/${id}`,
+      ` https://va-nanba.onrender.com/api/notes/${id}`,
       { title, content },
       { headers: { Authorization: token } }
     );

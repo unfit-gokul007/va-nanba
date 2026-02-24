@@ -16,7 +16,7 @@ export default function SingleNote() {
   useEffect(() => {
     if (!token) return;
 
-    axios.get("http://localhost:5000/api/notes", {
+    axios.get(" https://va-nanba.onrender.com/api/notes", {
       headers: { Authorization: token }
     }).then(res => {
       setNotes(res.data);

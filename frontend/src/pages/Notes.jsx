@@ -25,7 +25,7 @@ export default function Notes() {
   const fetchNotes = async () => {
     try {
       const res = await axios.get(
-        `http://localhost:5000/api/notes?search=${search}`,
+        ` https://va-nanba.onrender.com/api/notes?search=${search}`,
         {
           headers: { Authorization: token }
         }
@@ -45,7 +45,7 @@ export default function Notes() {
 
   try {
     await axios.post(
-      "http://localhost:5000/api/notes",
+      " https://va-nanba.onrender.com/api/notes",
       { title, content },
       {
         headers: { Authorization: token }
@@ -65,7 +65,7 @@ export default function Notes() {
   const deleteNote = async (id) => {
     try {
       await axios.delete(
-        `http://localhost:5000/api/notes/${id}`,
+        ` https://va-nanba.onrender.com/api/notes/${id}`,
         {
           headers: { Authorization: token }
         }
@@ -80,7 +80,7 @@ export default function Notes() {
   const downloadPDF = async (id) => {
     try {
       const res = await axios.get(
-        `http://localhost:5000/api/notes/pdf/${id}`,
+        ` https://va-nanba.onrender.com/api/notes/pdf/${id}`,
         {
           headers: { Authorization: token },
           responseType: "blob"

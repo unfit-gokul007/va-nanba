@@ -11,7 +11,7 @@ export default function Upload() {
   const fetchFiles = async () => {
     try {
       const res = await axios.get(
-        "http://localhost:5000/api/upload",
+        " https://va-nanba.onrender.com/api/upload",
         {
           headers: { Authorization: token }
         }
@@ -39,7 +39,7 @@ export default function Upload() {
       formData.append("file", file);
 
       await axios.post(
-        "http://localhost:5000/api/upload",
+        " https://va-nanba.onrender.com/api/upload",
         formData,
         {
           headers: {
@@ -63,7 +63,7 @@ export default function Upload() {
 const deleteFile = async (id) => {
   try {
     await axios.delete(
-      `http://localhost:5000/api/upload/${id}`,
+      ` https://va-nanba.onrender.com/api/upload/${id}`,
       {
         headers: { Authorization: token }
       }
